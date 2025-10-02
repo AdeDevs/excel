@@ -5,14 +5,14 @@ function App() {
   const [inventory, setInventory] = useState(() => {
     const stored = localStorage.getItem("inventory")
     return stored ? JSON.parse(stored) : [
-      { id: 1, title: "Batman", price: 2000, image: "/src/assets/bat.jpeg", unit: 0, favourite: false },
-      { id: 2, title: "Adeyemi", price: 3000, image: "/src/assets/ade.jpg", unit: 0, favourite: false },
-      { id: 3, title: "Boys", price: 4000, image: "/src/assets/bg.jpg", unit: 0, favourite: false },
-      { id: 4, title: "Bulb", price: 5000, image: "/src/assets/education.jpg", unit: 0, favourite: false },
-      { id: 5, title: "Stationary", price: 6000, image: "/src/assets/values-bg.jpg", unit: 0, favourite: false },
-      { id: 6, title: "Bat", price: 2000, image: "/src/assets/bat.jpeg", unit: 0, favourite: false },
-      { id: 7, title: "Ade", price: 3000, image: "/src/assets/ade.jpg", unit: 0, favourite: false },
-      { id: 8, title: "The Boys", price: 4000, image: "/src/assets/bg.jpg", unit: 0, favourite: false },
+      { id: 1, title: "Batman", price: 2000, image: "/assets/bat.jpeg", unit: 0, favourite: false },
+      { id: 2, title: "Adeyemi", price: 3000, image: "/assets/ade.jpg", unit: 0, favourite: false },
+      { id: 3, title: "Boys", price: 4000, image: "/assets/bg.jpg", unit: 0, favourite: false },
+      { id: 4, title: "Bulb", price: 5000, image: "/assets/education.jpg", unit: 0, favourite: false },
+      { id: 5, title: "Stationary", price: 6000, image: "/assets/values-bg.jpg", unit: 0, favourite: false },
+      { id: 6, title: "Bat", price: 2000, image: "/assets/bat.jpeg", unit: 0, favourite: false },
+      { id: 7, title: "Ade", price: 3000, image: "/assets/ade.jpg", unit: 0, favourite: false },
+      { id: 8, title: "The Boys", price: 4000, image: "/assets/bg.jpg", unit: 0, favourite: false },
     ]
   })
 

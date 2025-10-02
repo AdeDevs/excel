@@ -113,7 +113,6 @@ function App() {
 
   return (
     <div className="parent">
-      <h1>hello</h1>
       <div className="market">
         {inventory.map((item) => {
           return (

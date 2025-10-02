@@ -19,8 +19,8 @@ function App() {
   const [cart, setCart] = useState(() => {
     const stored = localStorage.getItem("cart")
     return stored ? JSON.parse(stored) : [
-      { id: 0, title: "Travelling Bag", price: 20000, image: "/src/assets/ade.jpg", unit: 0 },
-      { id: 1, title: "MacBook", price: 2000000, image: "/src/assets/bat.jpeg", unit: 0 }
+      { id: 0, title: "Travelling Bag", price: 20000, image: "/ade.jpg", unit: 0 },
+      { id: 1, title: "MacBook", price: 2000000, image: "/bat.jpeg", unit: 0 }
     ]
   })
   useEffect(() => {

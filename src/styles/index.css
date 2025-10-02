@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --mainFont: "Montserrat", sans-serif;
+    --primary-color: #303F9F;
+    --secondary-color: #FFCA28;
+    --text-color: #303F9F;
+}
+
+
+
+.parent {
+    font-family: var(--mainFont);
+    height: 100vh;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    overflow-y: auto;
+}
+
+.market {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    gap: 15px;
+    width: 100%;
+    scrollbar-width: 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+} 
+.market-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.market img {
+    width: 20vw;
+    height: 270px;
+    min-width: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    box-sizing: border-box;
+}
+.market h1 {
+    font-weight: 600;
+    line-height: 100%;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.market p {
+    font-size: 13px;
+}
+.market h2, .cart p {
+    font-weight: 500;
+    font-size: 14px;
+}
+.market .unit {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.market .add-btn {
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 13px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: transparent;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+}
+.unit button {
+    padding: 2px 10px;
+    font-size: 13px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: transparent;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+}
+.fav {
+    width: fit-content;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &.active {
+        background-color: var(--primary-color);
+        color: var(--primary-color);
+        border-color: #fff;
+    }
+}
+h5 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 5px;
+}
+h5 span {
+    font-size: 14px;
+    font-weight: 500;
+}
+.cart {
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+.cart.active {
+    height: 100%;
+    max-height: 100vh;
+}
+.cart-nav h1 {
+    font-size: 15px;
+    font-weight: 600;
+}
+.cart-nav button {
+    padding: 5px 15px;
+    font-size: 13px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border: 2px solid #fff;
+    color: var(--primary-color);
+    font-family: inherit;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: transparent;
+        color: var(--secondary-color);
+    }
+}
+.cart-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.cart > div {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart .crate {
+    display: flex;
+    gap: 10px;
+    border: 2px solid darkblue;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-color: #fff;
+    }
+}
+.cart div p {
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cart div p span {
+    font-size: 13px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+.cart-img {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    box-sizing: border-box;
+}
+.crate:hover .cart-img {
+    border-color: var(--secondary-color);
+}
+
+.cart button {
+    padding: 15px 20px;
+    font-size: 13px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: red;
+        border-color: #fff;
+        color: #fff;
+    }
+}

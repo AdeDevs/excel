@@ -109,7 +109,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart))
     localStorage.setItem("inventory", JSON.stringify(inventory))
-    localStorage.clear()
   }, [inventory, cart])
 
   return (

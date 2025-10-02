@@ -246,3 +246,11 @@ h5 span {
         color: #fff;
     }
 }
+
+@media (max-width: 500px) {
+    .market img {
+        max-height: 200px;
+        min-width: auto;
+        width: 200px;
+    }
+}

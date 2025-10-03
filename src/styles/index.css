@@ -17,7 +17,58 @@
     font-size: 20px;
     overflow-y: auto;
 }
-
+.spcl {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.crt-btn {
+    width: 100%;
+    display: block;
+}
+.form {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.form .item-form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.item-form input, .item-form button, .crt-btn {
+    padding: 10px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 2px solid #303f9f6a;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+.item-form input {
+    font-size: 14px;
+}
+.item-form input:hover, .item-form input:focus, .item-form button:hover, .crt-btn:hover {
+    border-color: var(--primary-color);
+}
+.item-form button, .crt-btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+}
+.item-form img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
 .market {
     display: flex;
     padding: 10px;
@@ -227,8 +278,8 @@ h5 span {
     border-color: var(--secondary-color);
 }
 
-.cart button {
-    padding: 15px 20px;
+.cart button, .del-btn {
+    padding: 10px 20px;
     font-size: 13px;
     box-sizing: border-box;
     cursor: pointer;
@@ -246,11 +297,28 @@ h5 span {
         color: #fff;
     }
 }
+.cart-total {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: space-between;
+    gap: 5px;
+}
 
 @media (max-width: 500px) {
     .market img {
         max-height: 200px;
         min-width: auto;
         width: 200px;
+    }
+    .item-form img {
+        width: 160px;
+        height: 160px;
     }
 }

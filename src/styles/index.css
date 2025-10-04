@@ -27,6 +27,7 @@ a:hover {
 .nav-bar {
     box-sizing: border-box;
     position: sticky;
+    z-index: 1000;
     top: 0;
 }
 .msg {

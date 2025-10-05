@@ -34,6 +34,7 @@ a:hover {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 .msg a {
     display: block;
@@ -42,6 +43,7 @@ a:hover {
     padding: 10px 15px;
     font-size: 13px;
     font-weight: 500;
+    width: fit-content;
     text-transform: capitalize;
 }
 .navigation {
@@ -133,8 +135,8 @@ a:hover {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #303f9f69;
-    backdrop-filter: blur(10px);
+    background-color: #303f9f38;
+    backdrop-filter: blur(5px);
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease-in-out;

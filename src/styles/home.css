@@ -1,5 +1,147 @@
 .home {
-    padding: 10px;
     box-sizing: border-box;
     font-family: var(--mainFont);
+}
+
+.about-us-banner {
+    height: 400px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    grid-row: 1fr;
+}
+.about-us-banner div {
+    grid-row: 1;
+    grid-column: 1;
+}
+.about-us-bg {
+    background-image: url(../assets/student.jpeg);
+    background-position: center -100px;
+    background-size: cover;
+}
+.about-us-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: #fff;
+    align-items: start;
+    background-color: #00000068;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+.about-us-text h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.about-us-text p {
+    margin: 25px 0 20px 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.who-we-are {
+    margin: 20px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 35% 1fr;
+}
+.who-bg {
+    background-image: url(../assets/rocket.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 10px;
+    height: 32vw;
+    min-height: 300px;
+    position: sticky;
+    top: 110px;
+}
+.who-text h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    line-height: 100%;
+}
+.who-text h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin: 15px 0;
+}
+.who-text p {
+    line-height: 35px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.who-text .bold {
+    font-weight: 600;
+}
+.our-values {
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.our-values h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 100%;
+}
+.values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+} 
+.values section {
+    background-color: #fff;
+    border: 2px solid #5b5b5b31;
+    box-shadow: 0 4px 20px #a6a6a631;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    gap: 20px;
+    justify-content: space-between;
+}
+.values h2 {
+    line-height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+}
+.values img {
+    width: 40px;
+}
+
+@media screen and (max-width: 750px) {
+    .about-us-bg {
+        background-position: center;
+    }
+    .who-we-are {
+        grid-template-columns: 1fr;
+        margin: 15px 0;
+    }
+    .who-bg {
+        min-height: auto;
+        background-image: url(../assets/rook.jpg);
+        height: 350px;
+        width: 100%;
+        top: 0;
+        position: relative;
+    }
+    .values {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

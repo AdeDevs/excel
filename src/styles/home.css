@@ -71,7 +71,7 @@
     line-height: 100%;
 }
 .who-text h2 {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 30px;
@@ -80,7 +80,7 @@
 .who-text p {
     line-height: 35px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 19px;
 }
 .who-text .bold {
     font-weight: 600;
@@ -147,5 +147,17 @@
     }
     .values {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .who-text h1, .our-values h1, .about-us-text h1 {
+        font-size: 38px;
+    }
+    .who-text h2 {
+        font-size: 18px;
+    }
+    .who-text p {
+        font-size: 17px;
     }
 }

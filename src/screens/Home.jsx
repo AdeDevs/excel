@@ -29,7 +29,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="our-values">
-                <h1>Our Values</h1>
+                <h1>Our Core Values</h1>
                 <div className="values">
                     <section>
                         <img src={Excellence} alt="icon" />

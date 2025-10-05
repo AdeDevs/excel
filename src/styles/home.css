@@ -115,6 +115,10 @@
     box-sizing: border-box;
     gap: 20px;
     justify-content: space-between;
+    transition: all .3s ease-in-out;
+    &:hover {
+        border-color: var(--primary-color);
+    }
 }
 .values h2 {
     line-height: 100%;

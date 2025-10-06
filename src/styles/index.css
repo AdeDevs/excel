@@ -35,6 +35,7 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     position: relative;
+    z-index: 999;
 }
 .msg a {
     display: block;
@@ -77,13 +78,20 @@ a:hover {
 .desk-nav a:hover {
     text-decoration-color: inherit;
 }
+.tog ion-icon {
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+}
 .tog {
     border: 2px solid var(--primary-color);
-    padding: 5px 20px;
+    padding: 5px 10px;
     border-radius: 5px;
+    align-items: center;
     transition: all .3s ease-in-out;
     font-size: 12px;
     font-weight: 500;
+    display: flex;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -135,15 +143,99 @@ a:hover {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #303f9f38;
+    background-color: #0000003e;
     backdrop-filter: blur(5px);
     opacity: 0;
+    z-index: 1000;
     visibility: hidden;
     transition: all .3s ease-in-out;
 }
 .overlay.open {
     opacity: 1;
     visibility: visible;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 50px 15px 30px 15px;
+    box-sizing: border-box;
+    color: #fff;
+}
+footer a {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+}
+footer img {
+    width: 40px;
+}
+.main-footer {
+    padding: 0 0 25px 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    gap: 15px;
+}
+.main-footer .logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.main-footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: capitalize;
+    list-style-type: none;
+}
+.main-footer h2 {
+    font-size: 15px;
+    font-weight: 600;
+}
+.links span {
+    display: flex;
+}
+.links img {
+    width: 30px;
+}
+.links li {
+    width: fit-content;
+}
+.links a {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration-color: transparent;
+}
+.links a:hover {
+    text-decoration-color: inherit;
+}
+.sub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 0 0;
+    box-sizing: border-box;
+    border-top: 1px solid #ffffff5f;
+}
+.socials {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+.socials a {
+    display: flex;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 100%;
+}
+.socials img {
+    width: 20px;
+
 }
 
 @media screen and (max-width: 750px) {
@@ -156,10 +248,40 @@ a:hover {
     .desk-nav .tog {
         display: block;
     }
+    .main-footer {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+    }
+    .footer-intro {
+        grid-column: 1/3;
+    }
+    .sub-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .socials {
+        align-self: flex-end;
+    }
+}
+@media screen and (min-width: 751px) {
+    .mob-nav, .overlay {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .navigation, .mob-nav {
         padding: 15px;
+    }
+    .mob-nav {
+        padding: 20px 15px;
+    }
+    .main-footer {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .footer-intro {
+        grid-column: auto;
     }
 }

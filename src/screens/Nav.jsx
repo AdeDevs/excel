@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Logo from "../assets/logo.png"
+import menu from "../assets/menu.svg"
 
 export default function NavBar() {
     const [isMenu, setIsMenu] = useState(false)
@@ -18,11 +19,11 @@ export default function NavBar() {
                     <li><a href="/">online class</a></li>
                     <li><a href="/">contact</a></li>
                     <li><a href="/">blog</a></li>
-                    <li className="tog" onClick={toggleMenu}>Open</li>
+                    <li className="tog" onClick={toggleMenu}><ion-icon name="menu"></ion-icon></li>
                 </ul>
                 <div className={`overlay ${isMenu ? "open" : ""}`} onClick={toggleMenu}></div>
                 <ul className={`mob-nav ${isMenu ? "open" : ""}`}>
-                    <li className="tog" onClick={toggleMenu}>Close</li>
+                    <li className="tog" onClick={toggleMenu}><ion-icon name="menu"></ion-icon></li>
                     <li onClick={toggleMenu}><a href="/">about us</a></li>
                     <li onClick={toggleMenu}><a href="/">utme & ssce</a></li>
                     <li onClick={toggleMenu}><a href="/">ielts & toefl</a></li>

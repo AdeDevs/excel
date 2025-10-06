@@ -3,8 +3,113 @@
     font-family: var(--mainFont);
 }
 
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 100%;
+}
+.home button {
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    border: 2px solid #a0a0a07e;
+    font-family: inherit;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.hero {
+    /* height: 48vw; */
+    min-height: 90vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    grid-row: 1fr;
+}
+.hero div {
+    grid-row: 1;
+    grid-column: 1;
+}
+.hero-bg {
+    background-image: url(../assets/students.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.hero-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #151b46ac;
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.hero-text .title {
+    font-size: 50px;
+    font-weight: 700;
+}
+.hero-text h1, .hero-text p {
+    text-align: center;
+}
+.hero-text p {
+    font-size: 15px;
+}
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.hero-btns button {
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+}
+.hero-btns button:nth-child(2) {
+    background-color: #687cff5f;
+    color: #fff;
+}
+.hero-btns button:hover {
+    background-color: #687cff5f;
+    color: #fff;
+    border-color: #fff;
+}
+.stats {
+    padding: 40px 10px;
+    background-color: #1b2465;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    color: #FFCA28;
+}
+.stats section {
+    text-align: center;
+    align-items: center;
+}
+.stat-icon {
+    background-color: #687cff5f;
+    padding: 20px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stats img {
+    width: 30px;
+}
+.stats h2 {
+    line-height: 100%;
+    font-size: 30px;
+    font-weight: 700;
+}
 .about-us-banner {
-    height: 400px;
+    height: 500px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;
@@ -31,11 +136,6 @@
     padding: 20px 30px;
     box-sizing: border-box;
 }
-.about-us-text h1 {
-    font-size: 40px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
 .about-us-text p {
     margin: 25px 0 20px 0;
     text-transform: capitalize;
@@ -57,18 +157,14 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 32vw;
     min-height: 300px;
     position: sticky;
     top: 110px;
 }
 .who-text h1 {
-    font-size: 40px;
-    font-weight: 600;
     margin-bottom: 30px;
-    text-transform: capitalize;
-    line-height: 100%;
 }
 .who-text h2 {
     font-size: 21px;
@@ -85,25 +181,85 @@
 .who-text .bold {
     font-weight: 600;
 }
-.our-values {
+.why-us {
+    border: 1px;
+    margin-top: 20px;
+    padding: 10px 15px 15px 15px;
+    box-sizing: border-box;
+}
+.why-us-box {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    margin: 30px 0 10px 0;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.why-us-box h2 {
+    line-height: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.why-us-box p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 15px;
+}
+.why-us-box img {
+    width: 20px;
+}
+.why-points {
+    border: 2px solid #5b5b5b31;
+    background-color: #fff;
+    box-shadow: 0 4px 20px #a6a6a631;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 25px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        border-color: var(--primary-color);
+    }
+}
+.why-points h3 {
+    text-transform: capitalize;
+    line-height: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+.why-points ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.why-points ul span {
+    display: flex;
+}
+.why-points ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.our-values, .our-services {
     padding: 15px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.our-values h1 {
-    font-size: 40px;
-    font-weight: 600;
-    text-transform: capitalize;
-    line-height: 100%;
+.values-extra {
+    font-size: 16px;
 }
-.values {
+.our-values .title {
+    margin-bottom: -15px;
+}
+.values, .stats, .services {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-} 
-.values section {
+}
+.values section, .stats section, .services section {
     background-color: #fff;
     border: 2px solid #5b5b5b31;
     box-shadow: 0 4px 20px #a6a6a631;
@@ -120,14 +276,210 @@
         border-color: var(--primary-color);
     }
 }
-.values h2 {
+.stats section {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+.values h2, .services h2 {
     line-height: 100%;
+    text-transform: capitalize;
     font-size: 18px;
     font-weight: 500;
 }
 .values img {
     width: 40px;
 }
+.services {
+    grid-template-columns: repeat(3, 1fr);
+}
+.service-icon {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: fit-content;
+    border-radius: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-icon img {
+    width: 25px;
+}
+.services h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.our-testimonials {
+    padding: 15px;
+    box-sizing: border-box;
+}
+.our-testimonials .alumni {
+    line-height: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.our-testimonials .hear {
+    margin: 25px 0 10px 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px;
+}
+.testimonial-box {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    box-sizing: border-box;
+}
+.testimonial {
+    background-color: #fff;
+    border: 2px solid #5b5b5b31;
+    box-shadow: 0 4px 20px #a6a6a631;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    gap: 20px;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    &:hover {
+        border-color: var(--primary-color);
+    }
+}
+.testimonial .quote {   
+    width: 40px;
+}
+.testimonial-msg {
+    font-size: 15px;
+    font-style: italic;
+}
+.testimonial-info {
+    border-top: 1px solid #7a7a7a44;
+    padding: 15px 0 0 0;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+.testimonial-info .avatar {
+    border-radius: 100%;
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    max-height: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+.testimonial-info ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+}
+.testimonial #name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.newsletter {
+    padding: 50px 15px;
+    margin-top: 20px;
+    background-color: #1b2465;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+}
+.news-box h1 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 100%;
+}
+.news-box p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+.news-form, .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.news-form input, .news-form button {
+    padding: 15px 10px;
+    font-family: inherit;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #00000068;
+    transition: all .3s ease-in-out;
+}
+.news-form input {
+    font-size: 13px;
+}
+.news-form input:hover, .news-form input:focus {
+    border-color: #000;
+}
+.news-form button {
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #687cff5f;
+    font-size: 13px;
+    color: #fff;
+    border: 2px solid #a0a0a07e;
+}
+.news-form button:hover {
+    background-color: var(--secondary-color);
+    border-color: #fff;
+    color: #000;
+}
+.get-in-touch {
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.contact-box {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    margin: 20px 0;
+    gap: 20px;
+}
+.contact-form input, .contact-form button, .contact-form textarea {
+    padding: 15px 10px;
+    font-family: inherit;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #00000068;
+    transition: all .3s ease-in-out;
+}
+.contact-form input {
+    font-size: 14px;
+}
+.contact-form textarea {
+    height: 200px;
+    font-size: 14px;
+}
+.contact-form input:hover, .contact-form input:focus, .contact-form textarea:hover {
+    border-color: #000;
+}
+.contact-form button {
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    font-size: 13px;
+    color: #fff;
+    border: 2px solid #a0a0a07e;
+}
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+    border-color: #000;
+    color: #000;
+}
+
 
 @media screen and (max-width: 750px) {
     .about-us-bg {
@@ -149,14 +501,28 @@
     .who-text h1 {
         margin-bottom: 20px;
     }
-    .values {
+    .why-us-box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .values, .stats, .services, .testimonial-box {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .consulting {
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+    .contact-box {
+        grid-template-columns: 1fr;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .who-text h1, .our-values h1, .about-us-text h1 {
+    .title, .hero-text .title {
         font-size: 38px;
+    }
+    .hero-text, .about-us-text {
+        padding: 20px;
     }
     .who-text h2 {
         font-size: 18px;
@@ -164,7 +530,47 @@
     .who-text p {
         font-size: 17px;
     }
-    .values {
+    .values, .stats, .services, .testimonial-box {
         grid-template-columns: 1fr;
+    }
+    .consulting {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .stats {
+        gap: 20px;
+    }
+    .stats img {
+        width: 27px;
+    }
+    .stats h2 {
+        font-size: 25px;
+    }
+    .stats section {
+        background-color: #687cff5f;
+        border: 2px solid #b9b9b99c;
+        box-shadow: 0 4px 20px #a6a6a631;
+        &:hover {
+            border-color: #fff;
+        }
+    }
+    .hero-text p br, .hero-text h1 br {
+        display: none;
+    }
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-btns button {
+        width: 100%;
+    }
+    .why-us-box {
+        margin: 20px 0 10px 0;
+    }
+    .news-box p {
+        margin: 30px 0;
+    }
+    .why-points {
+        padding: 20px;
     }
 }
